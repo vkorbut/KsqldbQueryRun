@@ -48,6 +48,7 @@ trait ConfigServiceProd extends ConfigService[AppConfig] {
       lines.foldLeft(List(List.empty[String])){
         case (l, query) if query.trim == "#" => List.empty[String] :: l
         case (h ::t, query) => (query:: h) :: t
+        case (l, _) => l
       }.reverse.map(_.reverse)
     }
 

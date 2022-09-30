@@ -1,0 +1,1 @@
+Entellect ksql queries service that is creating queries in a given KSQLDB cluster based on an input file.
